@@ -18,13 +18,18 @@
     .eventForm{
       background-color: white;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      padding: 30px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
   <h2 style="text-align: center; font-family: 'Comfortaa', cursive;">Are you ready to  CCSTAT?</h2>
  <div class="container eventForm">
-  <p>Howdy!</p>
+  <h3>Howdy! Welcome to the backend of CCStat!</h3>
+  <p> What is the name of your organization?</p>
+  <p> What is the event title? </p>
+  <p> What is the date of the event?</p>
   </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
