@@ -1,4 +1,34 @@
-<!DOCTYPE html> 
-<head></head>
-<body> 
+<!DOCTYPE html>
+<head> 
+  <title></title>
+ <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Comfortaa|Source+Serif+Pro&display=swap" rel="stylesheet"> 
+  <style type="text/css">
+    body{
+      background-image: url("https://pbs.twimg.com/media/DEtGv27UQAAozEm.jpg"); 
+      background-repeat: no-repeat;
+      background-align: center;
+      background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+      font-family: 'Source Serif Pro', serif;
+    }
+    .eventForm{
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+  </style>
+</head>
+<body>
+  <h2 style="text-align: center; font-family: 'Comfortaa', cursive;">Are you ready to  CCSTAT?</h2>
+ <div class="container eventForm">
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script>
+    lazyload()
+  </script>
 </body>
+</html>
