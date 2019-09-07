@@ -24,6 +24,7 @@
 <body>
   <h2 style="text-align: center; font-family: 'Comfortaa', cursive;">Are you ready to  CCSTAT?</h2>
  <div class="container eventForm">
+  <p>Howdy!</p>
   </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
