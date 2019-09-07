@@ -59,10 +59,11 @@
 </nav>
  <div class="container eventForm">
   <h3>Howdy! Input your event info below!</h3>
-  <form action="form.php" method="post" action= <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>>
+  <form method="post" action="form.php">
    What is the name of your organization? <br> <input type="text" name="organization"></input> <br><br>
    What is the event title? <br> <input type="text" name="name"> </input><br><br>
-   What is the date and time of the event? <br> <input type="datetime-local" name="time"> </input><br><br>
+   what is the date of the event? <br> <input type="date" name="name"> </input><br><br>
+   What is the time of the event? <br> <input type="time" name="time"> </input><br><br>
     What type of event is it? <br> <input type="radio" name="category" value="Academic">Academic</input><br>
                                    <input type="radio" name="category" value="Athletic">Athletic</input><br>
                                    <input type="radio" name="category" value="Community">Community</input><br>
