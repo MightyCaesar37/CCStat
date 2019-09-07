@@ -58,9 +58,11 @@
 </nav>
  <div class="container eventForm">
   <h3>Howdy! Welcome to the backend of CCStat!</h3>
-  <p> What is the name of your organization?</p>
-  <p> What is the event title? </p>
-  <p> What is the date of the event?</p>
+  <form action="form.php" method="post">
+   What is the name of your organization? <input type="text" name="organization">
+   What is the event title? <input type="text" name="name">
+   What is the date of the event? <input type="datetime-local" name="time">
+</form>
   </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
