@@ -4,7 +4,14 @@
  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <style type="text/css">
     body{
-      background-color: #500000;
+      background-image: url("https://pbs.twimg.com/media/DEtGv27UQAAozEm.jpg"); 
+      background-repeat: no-repeat;
+      background-align: center;
+      background-attachment: fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     }
     .card{
       background-color: #ebdecc;
@@ -12,22 +19,28 @@
       padding: 10px;
       margin: 20px;
       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      text-align: center;
     }
-    .card h1{
+    .card h2{
       font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <span class="span4 card">
-    <h1 class="eventName">?php?</h1>
+  <h2 style="text-align: center;">Are you ready to  CCSTAT?</h2>
+  <span class="span4 card lazyload">
+    <h2 class="eventName">XXXX</h2>
     <img src="?php"/>
-    <p class="sponsor">?php</p>
-    <p class="time">?php</p>
-    <p class="description">?php</p>
+    <p class="sponsor">XXXX</p>
+    <p class="time">XXXX</p>
+    <p class="description">XXXXX</p>
   </span>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+  <script>
+    lazyload()
+  </script>
 </body>
-
+</html>
