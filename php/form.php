@@ -28,7 +28,7 @@ $result = $conn->query($orgQuery);
 $row = $result->fetch_assoc();
 $org_id = $row["organization_id"];
 
-echo $org_id;
+//echo $org_id;
 
 
 function test_input($data) {
