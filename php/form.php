@@ -23,6 +23,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     $organization = test_input($_POST['organization']);
 }
 
+$orgQuery = "SELECT organization_id FROM organization WHERE organization = '$organization';";
+$result = $conn->query($orgQuery);
+$row = $result->fetch_assoc();
+$org_id = $row["organization_id"];
+
+echo $org_id;
+
+
 function test_input($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -30,8 +38,10 @@ function test_input($data) {
     return $data;
   }
 
+
+
 $eventsql = "INSERT INTO events (name, date, organization_id, location, category, time)
- VALUES ( '$name', /*STR_TO_DATE('$date', 'YYYY/MM/DD')*/ '$date', 1, '$location', '$category', '$time')";
+ VALUES ( '$name', /*STR_TO_DATE('$date', 'YYYY/MM/DD')*/ '$date', $org_id, '$location', '$category', '$time')";
 //$sql = "INSERT INTO events VALUES ('testName', STR_TO_DATE('11/20/2000', 'YYYY/MM/DD'), 1, 'testLocation', 'other', '12:30')";
 
 if ($conn->query($eventsql) === TRUE) {
