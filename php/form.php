@@ -34,10 +34,10 @@ $eventsql = "INSERT INTO events (name, date, organization_id, location, category
  VALUES ( '$name', /*STR_TO_DATE('$date', 'YYYY/MM/DD')*/ '$date', 1, '$location', '$category', '$time')";
 //$sql = "INSERT INTO events VALUES ('testName', STR_TO_DATE('11/20/2000', 'YYYY/MM/DD'), 1, 'testLocation', 'other', '12:30')";
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($eventsql) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $eventsql . "<br>" . $conn->error;
 }
 
 $conn->close();
