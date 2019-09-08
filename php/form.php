@@ -1,4 +1,6 @@
 <?php
+echo htmlspecialchars($_SERVER["PHP_SELF"]);
+
 $servername = "localhost";
 $username = "root";
 $password = "qpal10-@";
@@ -10,17 +12,51 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 } 
-
+$nameErr = $dateErr = $locationErr = $categoryErr = $timeErr = $organizationErr = '';
 $name = $date = $location = $category = $time = $organization = '';
 
-if($_SERVER["REQUEST_METHOD"] == "POST"){
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  if (empty($_POST["name"])) {
+    $nameErr = "Name is required";
+  } else {
     $name = test_input($_POST["name"]);
+  }
+
+  if (empty($_POST["organization"])) {
+    $organizationErr = "Organization is required";
+  } else {
     $organization = test_input($_POST["organization"]);
+  }
+
+  if (empty($_POST["time"])) {
+    $time = "Time is required";
+  } else {
     $time = test_input($_POST["time"]);
-    $date = test_input($_POST['date']);
-    $location = test_input($_POST['location']);
-    $category = test_input($_POST['category']);
-    $organization = test_input($_POST['organization']);
+  }
+
+  if (empty($_POST["date"])) {
+    $date = "Date is required";
+  } else {
+    $date = test_input($_POST["date"]);
+  }
+    
+  if (empty($_POST["location"])) {
+    $location = "Location is required";
+  } else {
+    $location = test_input($_POST["location"]);
+  }
+    
+ if (empty($_POST["category"])) {
+    $category = "Category is required";
+  } else {
+    $category = test_input($_POST["category"]);
+  }
+    
+ if (empty($_POST["organization"])) {
+    $organization = "Organization is required";
+  } else {
+    $organization = test_input($_POST["organization"]);
+  }
 }
 
 function test_input($data) {
