@@ -59,59 +59,18 @@
 </nav>
  <div class="container eventForm">
   <h3>Howdy! Input your event info below!</h3>
-  <form method="post" action="<?php echo htmlspecialchars($_SERVER["form.php"]);?>">
-   What is the name of your organization? <br> <input type="text" name="organization" value="<?php echo $organization;?>"><br><br>
-   What is the event title? <br> <input type="text" name="name" value="<?php echo $name;?>"><br><br>
-   What is the date of the event? <br> <input type="date" name="date" value="<?php echo $date;?>"><br><br>
-   What is the time of the event? <br> <input type="time" name="time" value="<?php echo $time;?>"><br><br>
-    What type of event is it? <br> <input type="radio" name="category" value="Academic"><?php if (isset($category) && $category=="Academic") echo "checked";?>Academic<br>
-                                   <input type="radio" name="category" value="Athletic"><?php if (isset($category) && $category=="Atheletic") echo "checked";?>Athletic<br>
-                                   <input type="radio" name="category" value="Community"><?php if (isset($category) && $category=="Community") echo "checked";?>Community<br>
-                                   <input type="radio" name="category" value="Other"><?php if (isset($category) && $category=="Other") echo "checked";?>Other<br>
-<?php
-// define variables and set to empty values
-$organization = $name = $date = $time = $category = "";
-$organizationErr = $nameErr = $dateErr = $timeErr = $categoryErr = "";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  if (empty($_POST["name"])) {
-    $nameErr = "Event Name is required";
-  } else {
-    $name = test_input($_POST["name"]);
-  }
-
-  if (empty($_POST["organization"])) {
-    $organizationErr = "Organization is required";
-  } else {
-    $organization = test_input($_POST["email"]);
-  }
-
-  if (empty($_POST["date"])) {
-    $dateErr = "Date is required";
-  } else {
-    $website = test_input($_POST["website"]);
-  }
-
-  if (empty($_POST["time"])) {
-    $timeErr = "Time is required";
-  } else {
-    $time = test_input($_POST["time"]);
-  }
-
-  if (empty($_POST["category"])) {
-    $categoryErr = "Category is required";
-  } else {
-    $category = test_input($_POST["category"]);
-  }
-}
-function test_input($data) {
-  $data = trim($data);
-  $data = stripslashes($data);
-  $data = htmlspecialchars($data);
-  return $data;
-}
-
-?>
-<button type="submit" style="margin: 20px;">Submit</button> <br>
+  <form method="post" action="form.php">
+   What is the name of your organization? <br> <input type="text" name="organization"></input> <br><br>
+   What is the event title? <br> <input type="text" name="name"> </input><br><br>
+   What is the date of the event? <br> <input type="date" name="date"> </input><br><br>
+   What is the time of the event? <br> <input type="time" name="time"> </input><br><br>
+   What is the location of the event? <br> <input type="text" name="location"></input><br><br>
+    What type of event is it? <br> <input type="radio" name="category" value="Academic">Academic</input><br>
+                                   <input type="radio" name="category" value="Athletic">Athletic</input><br>
+                                   <input type="radio" name="category" value="Community">Community</input><br>
+                                   <input type="radio" name="category" value="Other">Other</input><br>
+   <!-- for info on how to multi-checkbox, go to https://www.formget.com/php-checkbox/ -->
+<button type="submit" style="margin: 20px;">Submit <br>
 </form>
   </div>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
