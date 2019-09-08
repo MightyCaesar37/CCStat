@@ -56,10 +56,10 @@ function test_input($data) {
 VALUES ('$organization', '$organization_slug')";
 
 
-if ($conn->query($sql) === TRUE) {
+if ($conn->query($orgsql) === TRUE) {
     echo "New record created successfully";
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    echo "Error: " . $orgsql . "<br>" . $conn->error;
 }
 
 $conn->close();
